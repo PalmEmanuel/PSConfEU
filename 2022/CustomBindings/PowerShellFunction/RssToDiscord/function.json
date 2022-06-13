@@ -1,0 +1,19 @@
+{
+  "bindings": [
+    {
+      "type": "Discord",
+      "direction": "out",
+      "name": "Discord",
+      "DiscordWebhookUrl": "%WebhookUrl%",
+      "DiscordUsername": "%BotUsername%",
+      "DiscordAvatarUrl": "%PSConfAvatarUrl%"
+    },
+    {
+      "type": "RSSTrigger",
+      "direction": "in",
+      "name": "RssData",
+      "FeedName": "LoremRSS",
+      "FeedUrl": "%FeedUrl%"
+    }
+  ]
+}

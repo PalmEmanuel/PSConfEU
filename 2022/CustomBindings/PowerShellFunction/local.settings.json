@@ -1,0 +1,12 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME_VERSION": "~7",
+    "FUNCTIONS_WORKER_RUNTIME": "powershell",
+    "FeedUrl": "https://lorem-rss.herokuapp.com/feed",
+    "WebhookUrl": "webhook-url",
+    "BotUsername": "PSConf EU Bot",
+    "PSConfAvatarUrl": "https://pbs.twimg.com/profile_images/1498991285809655811/0IwmQcfF_400x400.jpg"
+  }
+}

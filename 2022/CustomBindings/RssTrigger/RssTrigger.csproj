@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Company>PipeHow</Company>
+    <Authors>Emanuel Palm</Authors>
+    <Description>A trigger for monitoring new posts to an RSS feed.</Description>
+    <Copyright>(c) Emanuel Palm. All rights reserved.</Copyright>
+    <PackageProjectUrl>https://github.com/PalmEmanuel/PSConfEU/tree/main/2022</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/PalmEmanuel/PSConfEU/tree/main/2022</RepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Azure.Data.Tables" Version="12.5.0" />
+    <PackageReference Include="Microsoft.Azure.WebJobs" Version="3.0.31" />
+    <PackageReference Include="System.ServiceModel.Syndication" Version="6.0.0" />
+  </ItemGroup>
+
+</Project>
