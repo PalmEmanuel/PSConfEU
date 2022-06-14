@@ -18,7 +18,7 @@ ModuleVersion = '1.0.0'
 # CompatiblePSEditions = @()
 
 # ID used to uniquely identify this module
-GUID = '0be7d280-4846-4072-b669-4fbb6f24336e'
+GUID = '8ae5e755-a598-4869-a97b-55ca1c5cc432'
 
 # Author of this module
 Author = 'Emanuel Palm'
@@ -69,7 +69,7 @@ RequiredModules = @('PSessionize')
 # NestedModules = @()
 
 # Functions to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no functions to export.
-FunctionsToExport = '*'
+FunctionsToExport = 'Get-PSConfEUSession'
 
 # Cmdlets to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no cmdlets to export.
 CmdletsToExport = @()

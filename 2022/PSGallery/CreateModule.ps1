@@ -27,8 +27,9 @@ $ManifestInfo = @{
     ModuleVersion = '1.0.0'
     CompanyName = 'pipe.how'
     Author = 'Emanuel Palm'
+    FunctionsToExport = 'Get-PSConfEUSession'
     AliasesToExport = @()
-    FunctionsToExport = @()
+    CmdletsToExport = @()
     VariablesToExport = @()
 }
 # Create .psd1 module manifest file
