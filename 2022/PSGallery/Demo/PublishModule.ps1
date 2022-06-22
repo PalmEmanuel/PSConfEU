@@ -8,13 +8,14 @@ Register-PSRepository -Name 'PSConfEU' -SourceLocation $FeedUrlv2 -PublishLocati
 # With Azure Artifacts Credential Provider + Device Code
 # https://github.com/microsoft/artifacts-credprovider
 # Windows: Creates "$($Env:TEMP)\..\MicrosoftCredentialProvider\SessionTokenCache.dat"
+# NuGetApiKey is mandatory, but not used with Azure Artifacts - can contain anything
 Publish-Module -Path '.\PSConfEUSessionize' -NuGetApiKey 'anystring' -Repository PSConfEU
 Install-Module -Name PSConfEUSessionize -Repository PSConfEU
 Import-Module -Name PSConfEUSessionize
 Get-PSConfEUSession -SessionFilter Next
 
 # With manual PAT credential
-$PATSecret =  Get-Content .\secrets.txt | ConvertTo-SecureString -AsPlainText -Force
+$PATSecret =  'personal-access-token' | ConvertTo-SecureString -AsPlainText -Force
 $Credential = [pscredential]::new('user@example.com', $PATSecret)
 Publish-Module -Path ".\PSConfEUSessionize" -NuGetApiKey 'anystring' -Repository PSConfEU -Credential $Credential
 
