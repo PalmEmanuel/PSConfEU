@@ -6,8 +6,6 @@ Push-Location ".\$ModuleName"
 
 # Create .psm1 module script file with agenda id for PSConfEU2022 in a variable
 New-Item -Path "$ModuleName.psm1" -Value @'
-$SessionizeAgendaId = 'dothvubr'
-
 function Get-PSConfEUSession {
     param (
         [ValidateSet('Current','Next','All')]

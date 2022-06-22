@@ -1,14 +1,5 @@
-# Ensure we have the PSessionize module installed
-# https://www.powershellgallery.com/packages/PSessionize
-try {
-    Import-Module PSessionize -ErrorAction Stop
-}
-catch {
-    Install-Module PSessionize
-}
-
-# Get all sessions using the id of PSConfEU2022 and expand sessions info
-$Sessions = (Get-SessionizeSession -Id 'dothvubr')[0] | Select-Object -ExpandProperty sessions
+# Get all PSConfEU2022 sessions and expand sessions info
+$Sessions = Invoke-RestMethod 'https://psconfeu2022.sessionize.com/API/schedule' | Select-Object -ExpandProperty sessions
 
 $Date = Get-Date
 # Filter the already sorted sessions by those not yet started, group by starttime and expand the first group
