@@ -4,7 +4,7 @@ $ModuleName = 'PSConfEUSessionize'
 New-Item -Name $ModuleName -ItemType Directory
 Push-Location ".\$ModuleName"
 
-# Create .psm1 module script file with agenda id for PSConfEU2022 in a variable
+# Create .psm1 module script file with a function outline
 New-Item -Path "$ModuleName.psm1" -Value @'
 function Get-PSConfEUSession {
     param (
