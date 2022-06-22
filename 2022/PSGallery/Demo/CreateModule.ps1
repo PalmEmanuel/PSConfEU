@@ -20,7 +20,6 @@ function Get-PSConfEUSession {
 $ManifestInfo = @{
     Path = "$ModuleName.psd1"
     Description = 'A module to get information about PowerShell Conference Europe 2022.'
-    RequiredModules = 'PSessionize'
     RootModule = "$ModuleName.psm1"
     ModuleVersion = '1.0.0'
     CompanyName = 'pipe.how'
