@@ -1,4 +1,4 @@
-# AssemblyLoadContextPresentation
+# Write PowerShell modules without conflicts - Introducing Assembly Load Contexts
 
 Code and slides for the presentation on AssemblyLoadContexts for PSConfEU2023.
 
@@ -6,4 +6,4 @@ The demo shows a conflict between the module `Microsoft.Graph.Authentication` of
 
 The script `Build.ps1` creates a new folder structure for the module and manifest, and puts the assemblies in a subfolder called dependencies for loading them into a custom AssemblyLoadContext.
 
-The demo also uses the fantastic extension to Visual Studio called StageCoder, with four demo steps, the last one implementing [Isol8, an experimental module for implementing AssemblyLoadContexts in PowerShell modules](https://github.com/PalmEmanuel/Isol8).
+The demo also uses the fantastic extension to Visual Studio called StageCoder, with four demo steps, the last one showcasing [Isol8, an experimental module for implementing AssemblyLoadContexts in PowerShell modules](https://github.com/PalmEmanuel/Isol8).
