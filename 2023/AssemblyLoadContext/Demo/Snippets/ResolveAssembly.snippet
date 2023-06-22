@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+<CodeSnippet Format="1.0.0">
+<Header>
+<SnippetTypes>
+<SnippetType>Expansion</SnippetType>
+</SnippetTypes>
+<Title>ResolveAssembly</Title>
+<Author>CodePresenterGenerator</Author>
+<Description></Description><HelpUrl></HelpUrl>
+<Shortcut>ResolveAssembly</Shortcut>
+</Header>
+<Snippet>
+<Code Delimiter = "$"><![CDATA[    public static Assembly? ResolveAssembly(AssemblyLoadContext defaultAlc, AssemblyName assemblyName) {
+        if (assemblyName.Name == "ParseJWT") {
+            return alc.LoadFromAssemblyName(assemblyName);
+        }
+
+        return null;
+    }]]></Code>
+</Snippet>
+</CodeSnippet>
+</CodeSnippets>
