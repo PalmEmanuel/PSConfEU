@@ -1,20 +1,17 @@
-Push-Location ~
-Set-PSReadLineOption -PredictionSource None
-Import-Module StageCoder
+Get-AzToken
 
-$DemoSteps = @(
-    { Get-AzToken }
-    { Connect-AzAccount }
-    { Get-AzToken }
-    { Get-AzToken | Set-Clipboard }
-    { Disconnect-AzAccount }
-    { Get-AzToken }
-    { az login }
-    { Get-AzToken | Set-Clipboard }
-    { az logout }
-)
+Connect-AzAccount
 
-Set-Demo -Demo ($DemoSteps | ForEach-Object { $_.ToString().Trim() } ) -Timing Manual
+Get-AzToken
 
-Clear-Host
-Write-Host 'Getting cached tokens from other tools' -ForegroundColor Magenta
+Get-AzToken | Set-Clipboard
+
+Disconnect-AzAccount
+
+Get-AzToken
+
+az login
+
+Get-AzToken | Set-Clipboard
+
+az logout

@@ -1,16 +1,9 @@
-Push-Location ~
-Set-PSReadLineOption -PredictionSource None
-Import-Module StageCoder
+Disconnect-AzAccount
 
-$DemoSteps = @(
-    { Disconnect-AzAccount }
-    { az logout }
-    { Get-AzToken }
-    { Get-AzToken -Interactive }
-    { Get-AzToken }
-)
+az logout
 
-Set-Demo -Demo ($DemoSteps | ForEach-Object { $_.ToString().Trim() } ) -Timing Manual
+Get-AzToken
 
-Clear-Host
-Write-Host 'Getting tokens with only AzAuth' -ForegroundColor Magenta
+Get-AzToken -Interactive
+
+Get-AzToken
