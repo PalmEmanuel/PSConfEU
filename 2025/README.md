@@ -1,6 +1,6 @@
 # Presentation for PowerShell Conference Europe 2025
 
-The demo repos are found at [PalmEmanuel/PSConfEU2025-Core](https://github.com/PalmEmanuel/PSConfEU2025-Core) and [PalmEmanuel/PSConfEU2025-Internal](https://github.com/PalmEmanuel/PSConfEU2025-Internal).
+The demo repos are found at [PalmEmanuel/MirrorRepo-Core](https://github.com/PalmEmanuel/MirrorRepo-Core) and [PalmEmanuel/MirrorRepo-Internal](https://github.com/PalmEmanuel/MirrorRepo-Internal).
 
 ## Building robust CI/CD pipelines with GitHub Apps and custom automation
 
