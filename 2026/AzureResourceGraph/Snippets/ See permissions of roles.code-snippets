@@ -1,0 +1,11 @@
+{
+  " See permissions of roles": {
+    "prefix": " See permissions of roles",
+    "body": [
+      "authorizationresources",
+      "| where type == 'microsoft.authorization/roledefinitions'",
+      "    and properties.roleName contains 'Secrets Officer'"
+    ],
+    "description": " See permissions of roles"
+  }
+}

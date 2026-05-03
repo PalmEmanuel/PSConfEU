@@ -1,0 +1,20 @@
+{
+  " Detailed role assignments for workload identities": {
+    "prefix": " Detailed role assignments for workload identities",
+    "body": [
+      "authorizationresources",
+      "| where type =~ 'microsoft.authorization/roleassignments' and properties.principalType =~ 'ServicePrincipal'",
+      "| extend",
+      "    scope = properties.scope,",
+      "    principalId = properties.principalId,",
+      "    roleDefinitionId = tostring(properties.roleDefinitionId)",
+      "| join kind=inner (",
+      "    authorizationresources",
+      "    | where type =~ 'microsoft.authorization/roledefinitions'",
+      "    | project roleDefinitionId = id, roleName = properties.roleName, roleType = properties.type, roleDescription = properties.description",
+      ") on $left.roleDefinitionId == $right.roleDefinitionId",
+      "| project scope, principalId, roleName, roleType, roleDescription"
+    ],
+    "description": " Detailed role assignments for workload identities"
+  }
+}

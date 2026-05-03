@@ -1,0 +1,40 @@
+{
+    "editor.parameterHints.enabled": true,
+    "editor.inlineSuggest.enabled": true,
+    "editor.lightbulb.enabled": "onCode",
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false,
+        "kql": false
+    },
+    "editor.hover.enabled": "on",
+    "editor.suggest.showWords": true,
+    "editor.suggest.showSnippets": true,
+    "editor.suggest.showMethods": true,
+    "editor.suggest.showFunctions": true,
+    "editor.suggest.showVariables": true,
+    "editor.suggest.showClasses": true,
+    "editor.suggest.showModules": true,
+    "editor.suggest.showProperties": true,
+    "editor.suggest.showConstructors": true,
+    "editor.suggest.showFields": true,
+    "editor.suggest.showKeywords": true,
+    "editor.suggest.showColors": true,
+    "editor.suggest.showReferences": true,
+    "editor.suggest.showEnums": true,
+    "editor.suggest.showFiles": true,
+    "editor.suggest.showFolders": true,
+    "editor.suggest.showConstants": true,
+    "editor.suggest.showStructs": true,
+    "editor.suggest.showEvents": true,
+    "editor.suggest.showOperators": true,
+    "editor.suggest.showTypeParameters": true,
+    "[kql]": {
+        "editor.autoIndent": "none"
+    },
+    "editor.autoIndent": "none",
+    "terminal.integrated.hideOnStartup": "always",
+    "powershell.integratedConsole.showOnStartup": false
+}

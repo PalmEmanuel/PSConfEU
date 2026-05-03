@@ -1,0 +1,9 @@
+{
+  " Regex to find assignments on subscriptions": {
+    "prefix": " Regex to find assignments on subscriptions",
+    "body": [
+      "| where scope matches regex '^/subscriptions/[^/]+$'"
+    ],
+    "description": " Regex to find assignments on subscriptions"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  " KeyVaults": {
+    "prefix": " KeyVaults",
+    "body": [
+      "resources",
+      "| where type == 'microsoft.keyvault/vaults'",
+      "        and name contains 'kv'",
+      "        and not(tags['env'] == 'prod')"
+    ],
+    "description": " KeyVaults"
+  }
+}

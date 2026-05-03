@@ -1,0 +1,18 @@
+{
+  " VM with NIC join": {
+    "prefix": " VM with NIC join",
+    "body": [
+      "resources",
+      "| where type == \"microsoft.compute/virtualmachines\"",
+      "| extend osType = tostring(properties.storageProfile.osDisk.osType)",
+      "| join kind=inner (",
+      "    resources",
+      "    | where type == \"microsoft.network/networkinterfaces\"",
+      "    | project nicName = name, nicId = id, vmId = tostring(properties.virtualMachine.id)",
+      ") on $left.id == $right.vmId",
+      "| project name, location, resourceGroup, osType, nicName, nicId",
+      "| order by name asc"
+    ],
+    "description": " VM with NIC join"
+  }
+}
