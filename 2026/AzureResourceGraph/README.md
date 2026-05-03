@@ -1,10 +1,10 @@
 # Charting the Cloudy Sea with Azure Resource Graph
 
-Slides and notes for presentation about Azure Resource Graph at PSConfEU 2026.
+Slides and notes for the presentation about Azure Resource Graph at PSConfEU 2026.
 
 Demos use the Visual Studio Code Extension [bARGE - boosted Azure Resource Graph Explorer](https://marketplace.visualstudio.com/items?itemName=PalmEmanuel.barge-vscode), and [StageCoder](https://marketplace.visualstudio.com/items?itemName=EngstromJimmy.stagecoderVSCode).
 
-## Treasure Hunting in Azure with KQL as Your Map
+---
 
 In Azure, understanding the full landscape of your resources is key to making informed decisions.
 
