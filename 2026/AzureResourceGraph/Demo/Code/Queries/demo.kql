@@ -1,52 +1,20 @@
-// KeyVaults named 'kv' that do not have tag 'env' = 'prod'
-resources
-| where type == 'microsoft.keyvault/vaults'
-        and name contains 'kv'
-        and not(tags['env'] == 'prod')
+// KeyVaults
 
 // Case sensitivity ^
 // in, _cs & =~
 
 // Detailed role assignments for workload identities
-authorizationresources
-| where type =~ 'microsoft.authorization/roleassignments' and properties.principalType =~ 'ServicePrincipal'
-| extend
-    scope = properties.scope,
-    principalId = properties.principalId,
-    roleDefinitionId = tostring(properties.roleDefinitionId)
-| join kind=inner (
-    authorizationresources
-    | where type =~ 'microsoft.authorization/roledefinitions'
-    | project roleDefinitionId = id, roleName = properties.roleName, roleType = properties.type, roleDescription = properties.description
-) on $left.roleDefinitionId == $right.roleDefinitionId
-| project scope, principalId, roleName, roleType, roleDescription
+
 // Regex to find assignments on subscriptions
-| where scope matches regex '^/subscriptions/[^/]+$'
 
 // See permissions of roles
-authorizationresources
-| where type == 'microsoft.authorization/roledefinitions'
-    and properties.roleName contains 'Secrets Officer'
 
 // VM with NIC join
-resources
-| where type == "microsoft.compute/virtualmachines"
-| extend osType = tostring(properties.storageProfile.osDisk.osType)
-| join kind=inner (
-    resources
-    | where type == "microsoft.network/networkinterfaces"
-    | project nicName = name, nicId = id, vmId = tostring(properties.virtualMachine.id)
-) on $left.id == $right.vmId
-| project name, location, resourceGroup, osType, nicName, nicId
-| order by name asc
 
 // --- Tips & tricks ---
 
-// Default table, no need to specify 'resources'
-where type == 'microsoft.keyvault/vaults'
+// Default table
+
 // Hidden properties
-| project name, systemData
 
 // Shared queries
-{{ ResourceIdOfYourSharedQuery }}
-| project name, id
