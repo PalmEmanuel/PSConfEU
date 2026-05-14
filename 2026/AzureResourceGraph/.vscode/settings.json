@@ -36,5 +36,7 @@
     },
     "editor.autoIndent": "none",
     "terminal.integrated.hideOnStartup": "always",
-    "powershell.integratedConsole.showOnStartup": false
+    "powershell.integratedConsole.showOnStartup": false,
+    "stagecoder.allowHover": true,
+    "stagecoder.allowSuggestions": true
 }
