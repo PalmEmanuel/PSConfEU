@@ -2,6 +2,22 @@
 
 Slides and notes for the presentation about building open source modules in C# at PSConfEU 2026.
 
+The demo module was built with [Sampler](https://github.com/gaelcolas/Sampler) and can be found at [PalmEmanuel/AzPigeon](https://github.com/PalmEmanuel/AzPigeon).
+
+```powershell
+# Generated with Sampler
+$ModuleSplat = @{
+    ModuleName = 'AzPigeon'
+    ModuleDescription = 'A PowerShell module to read and write messages in Azure Storage Queues.'
+    ModuleVersion = '1.0.0'
+    ModuleAuthor = 'Emanuel Palm'
+    LicenseType = 'MIT'
+    DestinationPath = Resolve-Path '..'
+    ModuleType = 'SimpleModule'
+}
+New-SampleModule @ModuleSplat
+```
+
 Demos use the Visual Studio Code Extension [StageCoder](https://marketplace.visualstudio.com/items?itemName=EngstromJimmy.stagecoderVSCode).
 
 ---
